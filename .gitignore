@@ -1,0 +1,16 @@
+# Environments
+.env
+.venv
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+notebooks/main.ipynb
+
+# Python
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+.idx/
