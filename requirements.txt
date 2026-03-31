@@ -3,9 +3,17 @@ pip
 autopep8
 
 # App
+
 langchain_core
 langchain-google-genai # This package contains the LangChain integrations for the Gemini API.
 Pillow # PIL image-loading library
 
 langchain-groq
 dotenv
+
+qdrant-client 
+sentence-transformers
+langchain_community
+bs4
+langchain
+langchain-text-splitters
