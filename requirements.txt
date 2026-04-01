@@ -17,3 +17,4 @@ langchain_community
 bs4
 langchain
 langchain-text-splitters
+streamlit

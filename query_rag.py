@@ -34,7 +34,7 @@ qdrant_client = QdrantClient(
 )
 
 # Query
-query = "foods for anemia"
+query = "what are the key components of an LLM-powered agent?"
 
 query_vector = model.encode(query).tolist()
 
@@ -44,5 +44,17 @@ results = qdrant_client.search(
     limit=3
 )
 
+context = ""
 for res in results:
-    print(res.payload["text"])
+    context += res.payload["text"] + "\n\n"
+
+system_message = "You are a helpful assistant. Based on the following context, please answer the user's question. \n\nContext:\n" + context
+
+messages = [
+    SystemMessage(content=system_message),
+    HumanMessage(content=query)
+]
+
+# Stream the response
+for chunk in llm.stream(messages):
+    print(chunk.content, end="")

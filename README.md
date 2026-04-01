@@ -18,7 +18,7 @@ A Retrieval-Augmented Generation (RAG) based personalized nutrition advisor that
 
 2. **Activate the virtual environment:**
    ```bash
-   source venv/bin/activate
+   source .venv/bin/activate
    ```
 
 3. **Install the required dependencies:**
